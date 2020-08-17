@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+  application:
+    name: provider
+server:
+  port: 8085
+provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.chj.configuration.NacosweightRule
